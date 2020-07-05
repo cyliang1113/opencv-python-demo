@@ -22,7 +22,7 @@ print(size[1])
 for i in range(size[0]):
     for j in range(size[1]):
         if(img2[i, j] > 120):
-            img2[i, j] = 255
+            img2[i, j] = 255    # 把灰度图像改为黑白图像
         else:
             img2[i, j] = 0
 
