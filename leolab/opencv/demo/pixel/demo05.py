@@ -5,12 +5,6 @@
 import cv2
 import numpy as np
 
-# rgb三通道图像 每个像素还是一个数组 有三个元素 表示rgb
-# opencv中是bgr顺序
-
-import cv2
-import numpy as np
-
 img_file = "E:\\_leo\\666.jpg"
 
 img = cv2.imread(img_file, 0)
