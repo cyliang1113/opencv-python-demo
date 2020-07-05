@@ -7,5 +7,8 @@ img_file = "E:\\_leo\\666.jpg"
 # 读图像 返回像素点的数组
 img = cv2.imread(img_file)
 
-print(type(img))
-print(img)
+# 写图像到文件中
+r = cv2.imwrite("D:\\copy.jpg", img)
+
+print(r)
+
