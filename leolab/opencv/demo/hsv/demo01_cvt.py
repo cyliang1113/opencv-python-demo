@@ -18,10 +18,12 @@ img1_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 cv2.imshow("img1", img1_hsv)
 print("img1: \n", img1_hsv)
 
+# 找出 脸的区域
 minFace = np.array([9, 50, 50])
 maxFace = np.array([12, 255, 255])
-
 mask_face = cv2.inRange(img1_hsv, minFace, maxFace)
+
+# 取出 脸的区域 的颜色
 img2_face = cv2.bitwise_and(img, img, mask=mask_face)
 cv2.imshow("img2_face", img2_face)
 
