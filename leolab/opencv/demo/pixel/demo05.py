@@ -5,7 +5,7 @@
 import cv2
 import numpy as np
 
-img_file = "E:\\_leo\\666.jpg"
+img_file = "../jay.jpg"
 
 img = cv2.imread(img_file, 0)
 

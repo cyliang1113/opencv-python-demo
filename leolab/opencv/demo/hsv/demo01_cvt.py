@@ -1,0 +1,30 @@
+
+
+# 图像就是像素的数组
+
+
+import cv2
+import numpy as np
+
+# hsv色彩空间 和人识别颜色类似
+
+img_file = "../xiaoxin.jpg"
+
+img = cv2.imread(img_file)
+cv2.imshow("img", img)
+print("img: \n", img)
+
+img1_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+cv2.imshow("img1", img1_hsv)
+print("img1: \n", img1_hsv)
+
+minFace = np.array([9, 50, 50])
+maxFace = np.array([12, 255, 255])
+
+mask_face = cv2.inRange(img1_hsv, minFace, maxFace)
+img2_face = cv2.bitwise_and(img, img, mask=mask_face)
+cv2.imshow("img2_face", img2_face)
+
+cv2.waitKey()
+
+cv2.destroyAllWindows()

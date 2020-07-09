@@ -16,9 +16,9 @@ cv2.imshow("all", img)
 arr = cv2.split(img)
 
 
-cv2.imshow("b", arr[0])
-cv2.imshow("g", arr[1])
-cv2.imshow("r", arr[2])
+# cv2.imshow("b", arr[0])
+# cv2.imshow("g", arr[1])
+# cv2.imshow("r", arr[2])
 
 bgr = cv2.merge([arr[0], arr[1], arr[2]])
 cv2.imshow("bgr", bgr)
