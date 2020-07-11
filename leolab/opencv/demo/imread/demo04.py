@@ -4,7 +4,7 @@ import cv2
 
 # 读图片, 返回 像素数组
 
-img_file = "../xiaoxin.jpg"
+img_file = "../image_src/xiaoxin.jpg"
 
 
 img1 = cv2.imread(img_file, 0) # 灰度处理

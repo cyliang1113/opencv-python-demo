@@ -8,7 +8,7 @@ import numpy as np
 # 大于阈值的变成255 小于的变成0
 
 
-img_file = "../jay.jpg"
+img_file = "../image_src/jay.jpg"
 
 img = cv2.imread(img_file, 0)
 cv2.imshow("img", img)

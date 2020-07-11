@@ -8,7 +8,7 @@ import numpy as np
 
 # 合并通道
 
-img_file = "../jay.jpg"
+img_file = "../image_src/jay.jpg"
 
 img = cv2.imread(img_file)
 cv2.imshow("all", img)

@@ -7,7 +7,7 @@ import numpy as np
 # hsv色彩空间 和人识别颜色类似
 # h-颜色 s-饱和度 v-明度
 
-img_file = "../xiaoxin.jpg"
+img_file = "../image_src/xiaoxin.jpg"
 
 img = cv2.imread(img_file)
 cv2.imshow("img", img)

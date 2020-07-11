@@ -5,7 +5,7 @@ import cv2
 
 # 自适应阈值处理
 
-img_file = "../gonglu.jpg"
+img_file = "../image_src/gonglu.jpg"
 
 img = cv2.imread(img_file, 0)
 cv2.imshow("img", img)

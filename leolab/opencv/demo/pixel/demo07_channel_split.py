@@ -8,7 +8,7 @@ import numpy as np
 
 # 拆分通道
 
-img_file = "../xiaoxin.jpg"
+img_file = "../image_src/xiaoxin.jpg"
 
 img = cv2.imread(img_file)
 cv2.imshow("all", img)
