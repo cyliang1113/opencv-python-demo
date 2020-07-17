@@ -16,7 +16,7 @@ t, rst = cv2.threshold(img, 125, 255, cv2.THRESH_BINARY)
 cv2.imshow("rst-125", rst)
 
 
-# 自动计算合适的阈值
+# 自动计算整张图像合适的阈值
 threshold, otsu = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 cv2.imshow("otsu", otsu)
 print("otsu threshold: ", threshold)

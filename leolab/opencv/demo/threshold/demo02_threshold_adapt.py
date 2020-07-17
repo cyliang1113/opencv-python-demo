@@ -16,7 +16,7 @@ t, rst = cv2.threshold(img, 125, 255, cv2.THRESH_BINARY)
 cv2.imshow("rst", rst)
 print("rst: \n", rst)
 
-# 自适应阈值 小范围内有一个阈值
+# 自适应阈值 每个小范围内有一个阈值
 adaptMean = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 5, 3)
 cv2.imshow("adaptMean", adaptMean)
 print("adaptMean: \n", adaptMean)

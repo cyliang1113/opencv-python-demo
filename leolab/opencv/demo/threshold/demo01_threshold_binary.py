@@ -10,7 +10,7 @@ import numpy as np
 
 img_file = "../image_src/jay.jpg"
 
-img = cv2.imread(img_file, 0)
+img = cv2.imread(img_file, 0)  # 灰度图像
 cv2.imshow("img", img)
 print("img: \n", img)
 
