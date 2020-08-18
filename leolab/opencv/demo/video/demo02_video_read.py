@@ -2,9 +2,11 @@ import cv2
 import numpy as np
 
 # 打开电脑摄像头
-capture = cv2.VideoCapture("../video_src/dalanqiu.mp4")
+capture = cv2.VideoCapture("../video_src/zipai.mp4")
 
 print("capture: ", capture)
+
+
 
 i = 0
 while (capture.isOpened()):
@@ -14,9 +16,12 @@ while (capture.isOpened()):
     print("capture read ret: ", ret)
     if (not ret):
         exit(-1)
-
+    frame_shape = frame.shape
+    cv2.namedWindow("win", 0)
+    cv2.resizeWindow("win", 480, int((frame_shape[0]/frame_shape[1]) * 480))
     cv2.imshow("win", frame)
-    cv2.waitKey(17)
+
+    cv2.waitKey(1000)
     # frame_gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
     # frame_gray_write_ret = cv2.imwrite("D:\\capture\\capture_gray_" + str(i) + ".jpg", frame_gray)
     # print("frame_gray write ret: ", frame_gray_write_ret)
