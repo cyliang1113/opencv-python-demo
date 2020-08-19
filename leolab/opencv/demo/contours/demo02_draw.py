@@ -1,4 +1,3 @@
-
 import cv2
 import numpy as np
 
@@ -17,15 +16,10 @@ mask = np.full(binary.shape, 255, dtype=np.uint8)
 binary_xor = cv2.bitwise_xor(binary, mask)  # 异或
 cv2.imshow("binary_xor", binary_xor)
 
-# cv2.RETR_EXTERNAL 只检测外轮廓, cv2.RETR_LIST 轮廓列表不建立关系, cv2.RETR_TREE 树结构的轮廓关系
-# cv2.CHAIN_APPROX_NONE 存储所有的轮廓点
 image, contours, hierarchy = cv2.findContours(binary_xor, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
-# image原始图像一样的
-# contours轮廓列表, 每个轮廓由若干点组成
-# hierarchy轮廓之间的关系,
-print("contours len=\n", len(contours))
-print("hierarchy=\n", hierarchy)
 
+o = cv2.drawContours(img, contours, -1, (0, 255, 0), 1)
+cv2.imshow("result", o)
 
 cv2.waitKey()
 
