@@ -4,7 +4,7 @@ import numpy as np
 # 图像轮廓
 
 
-img_file = "../image_src/lunkuo.png"
+img_file = "../image_src/lunkuo2.png"
 
 img = cv2.imread(img_file)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -18,7 +18,8 @@ cv2.imshow("binary_xor", binary_xor)
 
 image, contours, hierarchy = cv2.findContours(binary_xor, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
-o = cv2.drawContours(img, contours, -1, (0, 255, 0), 1)
+o = cv2.drawContours(img, contours, -1, (0, 0, 255), 2)  # 在原图上画出所有轮廓
+
 cv2.imshow("result", o)
 
 cv2.waitKey()
