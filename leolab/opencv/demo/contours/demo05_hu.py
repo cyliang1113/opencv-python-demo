@@ -26,7 +26,8 @@ for i in range(len(contours)):
     # cv2.imshow("iamge_new_" + str(i), iamge_new)
     m = cv2.moments(contours[i])
     print("contours_" + str(i) + "=\n", m)
-
+    hu = cv2.HuMoments(m);
+    print("contours_" + str(i) + "_hu=\n", hu)
 
 cv2.waitKey()
 

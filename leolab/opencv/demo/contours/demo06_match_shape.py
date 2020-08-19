@@ -4,7 +4,8 @@ import numpy as np
 # 图像轮廓
 
 
-img_file = "../image_src/lunkuo3.png"
+# img_file = "../image_src/lunkuo4.png"
+img_file = "../image_src/lunkuo5.png"
 
 img = cv2.imread(img_file)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -20,13 +21,9 @@ image, contours, hierarchy = cv2.findContours(binary_xor, cv2.RETR_LIST, cv2.CHA
 
 print("contours len=\n", len(contours))
 
-for i in range(len(contours)):
-    # base = np.full(img.shape, 0, dtype=np.uint8)
-    # iamge_new = cv2.drawContours(base, contours, i, (0, 0, 255), -1)  # 每个轮廓画在新的图像中, thickness: -1, 画出实心的轮廓
-    # cv2.imshow("iamge_new_" + str(i), iamge_new)
-    m = cv2.moments(contours[i])
-    print("contours_" + str(i) + "=\n", m)
+ret = cv2.matchShapes(contours[0], contours[1], 1, 0.0)
 
+print("ret=\n", ret)  # 相同的轮廓 返回接近0
 
 cv2.waitKey()
 
